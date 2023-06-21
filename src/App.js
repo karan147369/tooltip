@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Tooltip from "./Components/Tooltip";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div id="container">
+        <button id="myButton">Hover over me</button>
+        {/*change the position property in values props to 'Top', 'Left, 'Right','Bottom'*/}
+        <Tooltip
+          values={{
+            id: "myButton",
+            message: "Thanks for hovering! I'm a tooltip",
+            position: "Top",
+          }}
+        ></Tooltip>
+      </div>
+    </>
   );
 }
 
